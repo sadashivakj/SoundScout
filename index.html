@@ -3,8 +3,18 @@
 <head>
 	<title>SoundScout</title>
 
+	<!-- JQUERY LINK -->
+	<script
+	src="https://code.jquery.com/jquery-3.2.1.min.js"
+	integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+	crossorigin="anonymous"></script>
+
+	<!-- BOOTSTRAP LINK -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
+	<!-- CUSTOM CSS 
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	-->
 </head>
 
 <body style="background-color: #000000">
@@ -52,10 +62,34 @@
 
 <!-- 	Div for Spotify -->	
 			<div class="col-md-4" style="padding: 5px">
-				<section class="panel panel-body" id="spotify-display">
-				</section>
+				<div class="row">
+					<div class="col-md-12">
+						<section class="panel panel-body" id="spotify-display">
+						</section>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-12">
+						<section class="panel panel-body" id="twitter-display">
+
+							<script>
+								!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+							</script>
+
+							<div id="twitcontainer">
+
+						</section>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
+
+	<!-- MOMENT JS LINK -->
+	<script type="text/javascript" src="assets/javascript/moment.js"></script>
+
+	<!-- CUSTOM JS LINK -->
+	<script type="text/javascript" src="assets/javascript/logic.js"></script>
 </body>
 </html>
