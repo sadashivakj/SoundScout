@@ -12,26 +12,33 @@
 	<!-- BOOTSTRAP LINK -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-	<!-- CUSTOM CSS 
+	<!-- CUSTOM CSS	--> 
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-	-->
+
 </head>
 
-<body style="background-color: #000000">
+<body class="escape">
 
 <!-- 	The header with our brand name and logo.-->	
-	<div class="container">
-		<nav class="navbar navbar-default">
-  			<div class="container-fluid">
+	<div class="header">
+		<nav class="navbar navbar-inverse" style="border-width: 0px;">
+  			<div class="container-fluid" style="height: 80px;">
     			<div class="navbar-header">
-      				<a class="navbar-brand" href="#">
-        				<img alt="Brand" src="...">
+      				<a class="navbar-brand" href="">
+        				<img alt="SoundScout" id="header-logo" src="assets/images/SoundScoutLogo.png" height="60px">
       				</a>
     			</div>
+    			<ul class="nav nav-pills" style="float: right; margin: 20px 20px 0px 0px; color: #00ff14;">
+  					<li role="presentation" class="active"><a href="#">About</a></li>
+  					<li role="presentation"><a href="#">Guide</a></li>
+  					<li role="presentation"><a href="#">Team</a></li>
+				</ul>
   			</div>
 		</nav>
+	</div>
 
-<!-- 	The search bar for Artist input -->	
+<!-- 	The search bar for Artist input -->
+	<div class="container">
 		<div class="row" style="margin-bottom: 25px">
 			<div class="col-md-2" style="padding: 5px">
 			</div>
@@ -69,16 +76,16 @@
 					</div>
 				</div>
 
+<!-- 	Div for Twitter -->	
 				<div class="row">
 					<div class="col-md-12">
 						<section class="panel panel-body" id="twitter-display">
+							<div id="twitcontainer">
 
 							<script>
 								!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
 							</script>
-
-							<div id="twitcontainer">
-
+							</div>
 						</section>
 					</div>
 				</div>

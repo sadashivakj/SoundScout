@@ -1,0 +1,13 @@
+.escape {
+  background: #3E3E3E;
+  background-image: -webkit-radial-gradient(at 50% -16%, rgba(255, 255, 255, 0.05) 0%, rgba(0, 0, 0, 0.5) 190%);
+  background-image: radial-gradient(at 50% -16%, rgba(255, 255, 255, 0.05) 0%, rgba(0, 0, 0, 0.5) 190%);
+  background-blend-mode: normal,multiply; }
+
+  html {
+  	min-height: 100%;
+  }
+
+.nav-pills>li.active>a {
+    background-color: #00ff14;
+}
