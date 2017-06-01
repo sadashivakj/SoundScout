@@ -3,54 +3,96 @@
 <head>
 	<title>SoundScout</title>
 
-	<!-- JQUERY LINK -->
-	<script
-	src="https://code.jquery.com/jquery-3.2.1.min.js"
-	integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-	crossorigin="anonymous"></script>
+	<meta charset="UTF-8">
+	<meta name ="viewport" content="width=device-width, initial-scale=1">
 
-	<!-- BOOTSTRAP LINK -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	
+	<!-- okayNav CSS -->
+	<link rel="stylesheet" type="text/css" href="assets/css/normalize.css" media="screen">
+	<link rel="stylesheet" type="text/css" href="assets/css/basic-styles.css" media="screen">
 
-	<!-- CUSTOM CSS	--> 
-	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/header.css" media="screen">
+	<link rel="stylesheet" href="assets/css/okayNav-base.css" media="screen">
+	<link rel="stylesheet" href="assets/css/okayNav-theme.css" media="screen">
 
-</head>
+	<!-- Google Font -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
 
-<body class="escape">
+	<!-- Custom CSS -->
+	<link rel="stylesheet" type="text/css" href="assets/css/main.css">
+ 
+ </head>
+
+
+<!-- BODY/CONTENT DIV -->
+<body>
 
 <!-- 	The header with our brand name and logo.-->	
-	<div class="header">
-		<nav class="navbar navbar-inverse" style="border-width: 0px;">
-  			<div class="container-fluid" style="height: 80px;">
-    			<div class="navbar-header">
-      				<a class="navbar-brand" href="">
-        				<img alt="SoundScout" id="header-logo" src="assets/images/SoundScoutLogo.png" height="60px">
-      				</a>
-    			</div>
-    			<ul class="nav nav-pills" style="float: right; margin: 20px 20px 0px 0px; color: #00ff14;">
-  					<li role="presentation" class="active"><a href="#">About</a></li>
-  					<li role="presentation"><a href="#">Guide</a></li>
-  					<li role="presentation"><a href="#">Team</a></li>
-				</ul>
+<header id="header">
+	<a class="site-logo" href="#">
+		<img id="sslogo" src="assets/images/SoundScoutLogo.png">
+	</a>
+	<nav role="navigation" class="okayNav" id="nav-main">			
+
+      	<ul class="nav navbar-nav navbar-right">
+       		<li><a href="about.html">ABOUT</a></li>
+        	<li><a href="guide.html">GUIDE</a></li>
+        	<li><a href="team.html">TEAM</a></li>
+        </ul>
+			 		    
+	</nav>
+</header>
+
+	<div class="jumbotron jumbotronindex">
+		<div id="shadow">
+  			<h1 id="title1">Welcome To SoundScout</h1>
+  			
+  			<div class="container">
+  				<div class="row">
+  					<div class="col-md-12">
+	  					<form class="form-inline" id="form1">
+				  			<div class="form-group">
+				  				<input type="text" class="form-control" id="artist-input" placeholder="Search for Artist/Band">
+				  			</div>
+				  			<button type="submit" class="btn btn-default" id="search">search</button>
+			  			</form>
+			  			<div class="search-error"></div>
+			  			<form id="form2">
+				  			<div class="form-group">
+				  				<input type="text" class="form-control" id="artist-input" placeholder="Search for Artist/Band">
+				  			</div>
+				  			<button type="submit" class="btn btn-default" id="search">search</button>
+			  			</form>
+			  			<div class="search-error"></div>
+		  			</div>
+	  			</div>
   			</div>
-		</nav>
+  		</div>
 	</div>
 
-<!-- 	The search bar for Artist input -->
-	<div class="container">
-		<div class="row" style="margin-bottom: 25px">
-			<div class="col-md-2" style="padding: 5px">
-			</div>
-			<div class="col-md-8" style="padding: 5px">
-				<div class="input-group">
-  					<span class="input-group-addon" id="basic-addon3">Artist</span>
-  					<input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
-				</div>
-			</div>
-			<div class="col-md-2" style="padding: 5px">
-			</div>
-		</div>
+<div class="cosmos">
+	<div class="container" id="bottom">
+		<div id="content-div">
+  				<div class="row" style="margin-top: 180px;">
+  					<div class="col-md-12">
+	  					<form class="form-inline" id="form1">
+				  			<div class="form-group">
+				  				<input type="text" class="form-control" id="artist-input" placeholder="Search for Artist/Band">
+				  			</div>
+				  			<button type="submit" class="btn btn-default" id="search">search</button>
+			  			</form>
+			  			<div class="search-error"></div>
+			  			<form id="form2">
+				  			<div class="form-group">
+				  				<input type="text" class="form-control" id="artist-input" placeholder="Search for Artist/Band">
+				  			</div>
+				  			<button type="submit" class="btn btn-default" id="search">search</button>
+			  			</form>
+			  			<div class="search-error"></div>
+		  			</div>
+	  			</div>
 
 <!-- 	Section for our content -->	
 		<div class="row">
@@ -62,41 +104,57 @@
 			</div>
 
 <!-- 	Div for Google Map -->	
-			<div class="col-md-4" style="padding: 5px">
+			<div class="col-md-8" style="padding: 5px">
 				<section class="panel panel-body" id="map-display">
 				</section>
 			</div>
 
 <!-- 	Div for Spotify -->	
 			<div class="col-md-4" style="padding: 5px">
-				<div class="row">
-					<div class="col-md-12">
-						<section class="panel panel-body" id="spotify-display">
-						</section>
-					</div>
-				</div>
+				<section class="panel panel-body" id="spotify-display">
+				</section>
+			</div>
 
 <!-- 	Div for Twitter -->	
-				<div class="row">
-					<div class="col-md-12">
-						<section class="panel panel-body" id="twitter-display">
-							<div id="twitcontainer">
+			<div class="col-md-4">
+				<section class="panel panel-body" id="twitter-display">
+					<div id="twitcontainer" style="height: 800px; overflow: auto;">
 
-							<script>
-								!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
-							</script>
-							</div>
-						</section>
+						<script>
+							!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+						</script>
 					</div>
-				</div>
+				</section>
 			</div>
 		</div>
+		</div>
 	</div>
+</div>
+
+	<!-- JQUERY LINK -->
+	<script
+	src="https://code.jquery.com/jquery-3.2.1.min.js"
+	integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+	crossorigin="anonymous"></script>
+
+	<!-- okayNav JS -->
+	<script type="text/javascript" src="assets/javascript/jquery.okayNav.min.js"></script>
+
+	<!-- initialize okayNav -->
+    <script type="text/javascript">
+        var navigation = $('#nav-main').okayNav();
+    </script>
 
 	<!-- MOMENT JS LINK -->
 	<script type="text/javascript" src="assets/javascript/moment.js"></script>
 
 	<!-- CUSTOM JS LINK -->
 	<script type="text/javascript" src="assets/javascript/logic.js"></script>
+
+	<!-- SCROLL JS LINK -->
+	<script type="text/javascript" src="assets/javascript/scroll.js"></script>
+
+
+
 </body>
 </html>

@@ -1,0 +1,390 @@
+/* ********** GENERAL ********* */
+
+body {
+	background-color: #000000;
+	overflow:scroll;
+	/*
+	background-color:black;
+	background-image:
+	radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+	radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
+	radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px),
+	radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px);
+	background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+	background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+	*/
+
+}
+
+#teambody {
+	background: url(images/abstractblk.jpg);
+	background-size:100% 100%;
+	background-repeat:repeat-y;
+	background-color:rgba(0,0,0,0.5);
+}
+
+#aboutbody {
+	overflow:scroll;
+}
+
+div.col-md-12 {
+	width:100%;
+	margin:0 auto;
+}
+
+div.form-group {
+	width:30%;
+	margin:0 auto;
+}
+
+div.container {
+	margin-top:150px;
+}
+
+#form2 {
+	display:none;
+}
+
+#form1 {
+	display:block;
+}
+
+.numbers {
+	font-size: 30px;
+}
+
+.guide {
+	font-size: 25px;
+}
+
+.sectionName{
+	font-size: 30px;
+	font-weight: bold;
+}
+.template {
+	height: 200px
+}
+
+.row{
+	margin-bottom: 60px;
+}
+
+div.name {
+
+	background-color:#000;
+	height:50px;
+	padding:2%;
+
+}
+
+/* ********** TEXT ********** */
+
+@font-face {
+	font-family: "Abeat by Kai";
+	src:url("../abeatbykai/ABEAKRG.TTF") format("truetype");
+}
+
+h1#title1 {
+	font-family: "Abeat by Kai", sans-serif;
+	margin:1%;
+	color:#fff;
+}
+
+#title1 {
+	font-size:50px;
+	letter-spacing: 1.5px;
+}
+
+.jumbotron p {
+	font-family:'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	letter-spacing: 1.5px;
+	font-size:27px;
+}
+
+p {
+	color:#fff;
+}
+
+ul#concertlist {
+	color:#fff;
+	font-size:20px;
+}
+
+h3.teamname {
+	font-family: "Abeat by Kai", sans-serif;
+	font-size:30px;
+	color:#fff;
+	background-color:#000;
+
+	display:inline;
+	float:right;
+	margin:0;
+	padding:1%;
+	border:0;
+}
+
+div.bio {
+	color:#fff;
+	font-family:'Roboto', 'Helveetica Neue', Helvetica;
+	font-size:20px;
+	margin:2%;
+	margin-left:10%;
+}	
+
+#aboutp {
+	font-size:18px;
+	width:80%;
+	margin:0 auto;
+	height:100%;
+}
+
+/* ********** NAVIGATION ********** */
+
+header {
+	position:fixed;
+	top:0;
+	width:100%;
+	background-color: black;
+	margin:0 auto;
+	margin-bottom:1%;
+	z-index:100;
+}
+
+ul {
+	float:right;
+}
+
+li {
+	list-style-type: none;
+	float:left;
+	text-align: center;
+}
+
+li a {
+	letter-spacing: 1px;
+	background-color:#000;
+}
+
+#sslogo {
+	width:200px;
+}
+
+.okayNav a {
+	color:#52525b;
+	font-size:17px;
+	padding-right:2%;
+}
+
+.okayNav__nav--visible a:hover {
+	color:turquoise;
+}
+
+.nav>li>a:focus, .nav>li>a:hover {
+	background-color: #000;
+}
+
+nav.smnav {
+	margin-top:3%;
+	margin-left:10%;
+	background-color: #000;
+	width:70%;
+}
+
+/* ********** CONTENT ********** */
+
+#content-div {
+	text-align: center;
+    width: 100%;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+#bottom {
+	display: none;
+	width: 95%;
+	margin-top: 0px;
+}
+
+.cosmos {
+    background-color: #797572;
+    background-image: 
+        linear-gradient(-173deg, rgba(255,255,255,0.20) 0%, #000000 100%),
+        linear-gradient(72deg, rgba(255,255,255,0.25) 25%, rgba(0,0,0,0.25) 100%),
+        radial-gradient(47% 102%, rgba(255,255,255,0.50) 0%, rgba(21,24,32,0.60) 120%);
+    background-blend-mode: multiply;
+}
+
+
+/* ********** JUMBOTRON ********** */
+
+.jumbotronindex {
+	background-image: url("../images/original.jpg");
+	height: 600px;
+	padding: 0px;
+	margin-top:5%;
+	margin-bottom: 160px;
+}
+
+/*#aboutpg {
+	background-image: url("../images/bg.png");	
+	background-repeat: repeat;
+	z-index: 5;
+}
+*/
+#shadow {
+	text-align: center;
+    background: rgba(0, 0, 0, 0.42);
+    width: 100%;
+    padding-top: 150px;
+    color: #fff;
+    height: 500px;
+}
+
+#aboutshadow {
+	text-align: center;
+/*    background: rgba(0, 0, 0, 0.42);
+*/    width: 100%;
+    padding-top: 100px;
+    color: #fff;
+    height: 500px;
+}
+
+#title1 {
+	font-size: 50px;
+}
+
+/* ********** FORM ********** */
+
+input#artist-input.form-control {
+	width:300px;
+	margin:0 auto;
+}
+
+button.btn.btn-default {
+
+	width:100px;
+	height:40px;
+	
+	border-radius:25px;
+	border-style: solid;
+	border-color: turquoise;
+	border-width:2px;
+}
+
+button.btn.btn-default:hover {
+	border-color:#f44280;
+	background-color: #fff;
+}
+
+/* ********** IMAGES ********** */
+.portrait {
+	height:200px;
+	width:200px;
+	margin:20px;
+	margin-left:90px;
+	border:3px;
+	border-color:#FF0000;
+}
+
+.smicon {
+	display:inline-block;
+	margin-bottom:8%;
+}
+
+#sslogo:hover {
+	opacity:.4;
+}
+
+/* ********** MEDIA QUERIES ********** */
+
+@media screen and (max-width:1200px) {
+	#form2 {
+		display:block;
+	}
+
+	button.btn.btn-default {
+		margin:2%;
+	}
+
+	div.form-group {
+		width:100%;
+		margin:0 auto;
+	}
+
+	#form1 {
+		display:none;
+	}
+}
+
+@media screen and (max-width:432px) {
+	
+	div.name {
+		height:100px;
+		width:90%;
+		margin:0 auto;
+	}
+
+	nav.smnav {
+		margin-top:3%;
+		margin-left:10%;
+		background-color: #000;
+		width:80%;
+		margin:0 auto;
+	}
+
+	h3#teamname {
+
+		display:block;
+		float:left;
+		width:100%;
+		margin:0 auto;
+		padding:1%;
+		border:0;
+	}
+	
+	.socialmedia {
+		width:85%;
+		margin:0 auto;
+	}
+
+	.smicon {
+		display:inline-block;
+		margin:2%;
+	}
+}
+
+@media screen and (min-width:433px) and (max-width:768px) {
+	
+	div.name {
+		height:30px;
+		width:100%;
+		margin:0 auto;
+	}
+
+	nav.smnav {
+		margin-top:3%;
+		margin-left:10%;
+		width:80%;
+		margin:0 auto;
+	}
+
+	h3#teamname {
+
+		display:block;
+		float:right;
+		width:100%;
+		margin:0 auto;
+		padding:1%;
+		border:0;
+	}
+	
+	.socialmedia {
+		width:100%;
+		margin:0 auto;
+	}
+
+	.smicon {
+		display:block;
+		float:left;
+	}
+}
