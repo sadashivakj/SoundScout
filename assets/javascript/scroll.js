@@ -1,6 +1,6 @@
 $(document).ready(function(event) {
         
-       $(".jumbotron,#search").on("click", function(event) {
+       $(".btn,#search").on("click", function(event) {
             event.preventDefault();
             console.log("inside click function");
             $(".jumbotron").slideUp("slow", function() {
