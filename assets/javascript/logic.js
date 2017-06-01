@@ -32,7 +32,10 @@ function twitter(twitterURL){
     	sourceType: 'profile',
     	screenName: twitterHandle
   		},
-  		document.getElementById('twitcontainer')
+  		document.getElementById('twitcontainer'),
+  		{
+  			theme: "dark",
+  		}
 	);
 }
 
@@ -125,8 +128,9 @@ function ticketmasterRequest(artist){
 
 		// If input error is incorrect, alert the user. Otherwise, continue...
 		if (checkArtist === 0) {
-			// Instead of console.log, we need to figure out where to display this in the page
-			console.log("Sorry, try again!");
+			// This is the message for the user, uncomment when .search-error is added to html
+			// $(".search-error").html("*Sorry, try again");
+			// console.log("Sorry, try again");
 		}
 		else {
 			var artistId = artistResponse._embedded.attractions[0].id; 
@@ -150,9 +154,10 @@ function ticketmasterRequest(artist){
 
 				// If there are no concerts, alert the user. Otherwise, continue...
 				if (upcomingEvents === 0) {
-					// Instead of console.log, we need to figure out where to display this in the page
-					// From last conversation, the team said the message will be displayed in the concerts-display div
-					console.log("Sorry, no shows!");
+					// Display this message to the user if there are no shows
+					$("#concerts-display").html("It seems there are no upcoming shows");
+
+					// console.log("It seems there are no upcoming shows");
 				}
 				else {
 					// console.log(eventsResponse);
@@ -194,11 +199,12 @@ $("#search").on("click", function(event){
 	// This is the user's input
 	var artist = $("#artist-input").val().trim();
 
-	$("#input").val("");
+	$("#artist-input").val("");
 	$("#twitcontainer").empty();
 	$("#concerts-display").empty();
 
 	ticketmasterRequest(artist);
+
 });
 
 });
