@@ -1,7 +1,7 @@
 /* ********** GENERAL ********* */
 
 body {
-	background-color: #000000;
+	background-color: #000;
 	overflow:scroll;
 	/*
 	background-color:black;
@@ -16,15 +16,22 @@ body {
 
 }
 
+
+/*
 #teambody {
 	background: url(images/abstractblk.jpg);
 	background-size:100% 100%;
 	background-repeat:repeat-y;
 	background-color:rgba(0,0,0,0.5);
 }
+*/
 
-#aboutbody {
-	overflow:scroll;
+#teambody {
+	background-color: #000;
+}
+
+#guidebody {
+	background-color: #000;
 }
 
 div.col-md-12 {
@@ -35,10 +42,6 @@ div.col-md-12 {
 div.form-group {
 	width:30%;
 	margin:0 auto;
-}
-
-div.container {
-	margin-top:150px;
 }
 
 #form2 {
@@ -69,12 +72,18 @@ div.container {
 	margin-bottom: 60px;
 }
 
+/*
 div.name {
 
 	background-color:#000;
-	height:50px;
 	padding:2%;
 
+}
+*/
+
+div.socialmedia {
+	width:75%;
+	margin:0 auto;
 }
 
 /* ********** TEXT ********** */
@@ -118,14 +127,19 @@ h3.teamname {
 
 	display:inline;
 	float:right;
-	margin:0;
-	padding:1%;
-	border:0;
+	margin:2%;
+	padding:4%;
+	width:90%;
+
+	border-width:2px;
+	border-color: white;
+	border-style: solid;
+
 }
 
 div.bio {
 	color:#fff;
-	font-family:'Roboto', 'Helveetica Neue', Helvetica;
+	font-family:'Roboto', 'Helvetica Neue', Helvetica;
 	font-size:20px;
 	margin:2%;
 	margin-left:10%;
@@ -136,6 +150,22 @@ div.bio {
 	width:80%;
 	margin:0 auto;
 	height:100%;
+}
+
+h4 {
+	font-family:'Roboto', 'Helvetica Neue', Helvetica;
+	font-size:25px;
+	margin:3%;
+	margin-top:50%;
+
+}
+
+.search-error {
+	font-family:'Roboto', 'Helvetica Neue', Helvetica;
+	font-size:20px;
+	color:#ff0033;
+	width:30%;
+	margin:0 auto;
 }
 
 /* ********** NAVIGATION ********** */
@@ -154,7 +184,7 @@ ul {
 	float:right;
 }
 
-li {
+ul.navbar-nav>li {
 	list-style-type: none;
 	float:left;
 	text-align: center;
@@ -173,6 +203,7 @@ li a {
 	color:#52525b;
 	font-size:17px;
 	padding-right:2%;
+	font-weight:none;
 }
 
 .okayNav__nav--visible a:hover {
@@ -180,15 +211,17 @@ li a {
 }
 
 .nav>li>a:focus, .nav>li>a:hover {
-	background-color: #000;
+	background-color: transparent;
 }
 
+/*
 nav.smnav {
 	margin-top:3%;
 	margin-left:10%;
 	background-color: #000;
 	width:70%;
 }
+*/
 
 /* ********** CONTENT ********** */
 
@@ -200,12 +233,17 @@ nav.smnav {
 }
 
 #bottom {
-	display: none;
 	width: 95%;
 	margin-top: 0px;
 }
 
 .cosmos {
+	margin:0;
+	margin-top:-20%;
+	border:0;
+	padding-top:20%;
+	width:100%;
+	height:100%;
     background-color: #797572;
     background-image: 
         linear-gradient(-173deg, rgba(255,255,255,0.20) 0%, #000000 100%),
@@ -214,10 +252,25 @@ nav.smnav {
     background-blend-mode: multiply;
 }
 
+.cosmosindex {
+    background-color: #797572;
+    background-image: 
+        linear-gradient(-173deg, rgba(255,255,255,0.20) 0%, #000000 100%),
+        linear-gradient(72deg, rgba(255,255,255,0.25) 25%, rgba(0,0,0,0.25) 100%),
+        radial-gradient(47% 102%, rgba(255,255,255,0.50) 0%, rgba(21,24,32,0.60) 120%);
+    background-blend-mode: multiply;
+}
+
+#aboutbody .cosmosindex {
+	margin-bottom:-15%;
+	padding-bottom:15%;
+}
+
 
 /* ********** JUMBOTRON ********** */
 
 .jumbotronindex {
+	background-color:#000;
 	background-image: url("../images/original.jpg");
 	height: 600px;
 	padding: 0px;
@@ -225,12 +278,6 @@ nav.smnav {
 	margin-bottom: 160px;
 }
 
-/*#aboutpg {
-	background-image: url("../images/bg.png");	
-	background-repeat: repeat;
-	z-index: 5;
-}
-*/
 #shadow {
 	text-align: center;
     background: rgba(0, 0, 0, 0.42);
@@ -256,6 +303,11 @@ nav.smnav {
 /* ********** FORM ********** */
 
 input#artist-input.form-control {
+	width:300px;
+	margin:0 auto;
+}
+
+input#artist-input2{
 	width:300px;
 	margin:0 auto;
 }
@@ -295,6 +347,154 @@ button.btn.btn-default:hover {
 	opacity:.4;
 }
 
+.titleimg {
+	width:70%;
+	margin-top:10%;
+}
+
+.titleimg2 {
+	width:40%;
+	margin-top:0%;
+}
+
+.titleimg3 {
+	width:60%;
+	margin-top:10%;
+}
+
+/* ********** PANEL CONTENT ********** */
+
+#concerts-display {
+	background-color:transparent;
+	height:500px;
+
+	overflow-y:scroll;
+	overflow-x:hidden;
+
+	border-color:turquoise;
+	border-width: 2px;
+	border-style: solid;
+}
+
+div.searchContent {
+	display:block;
+	background-color:transparent;
+	margin-bottom:10%;
+}
+
+div.searchContent:last-child {
+	margin-bottom:0%;
+}
+
+div#searchResults {
+	background-color:transparent;
+}
+
+div#searchResults.panel-heading {
+	border-width:0 0 1px 0;
+	border-color:#f44280;
+}
+
+h3.searchResultsTitle {
+
+	font-family: "Abeat by Kai", sans-serif;
+	margin:1%;
+	color:#fff;
+	font-size:20px;
+	letter-spacing: 1px;
+}
+
+div.searchResultsContent {
+
+	font-family:"Roboto", "Helvetica Neue", Helvetica;
+	color:#fff;
+	font-size:15px;
+	background-color:transparent;
+
+}
+
+.panel-info {
+	border-style: none;
+	border-width: 2px;
+	border-color: #f44280;
+}
+
+.searchResultsContent a {
+	font-family: "Roboto", "Helvetica Neue", Helvetica;
+	color:#fff;
+	font-size:15px;
+	text-decoration: none;
+}
+
+.searchResultsContent a:hover {
+	font-family: "Roboto", "Helvetica Neue", Helvetica;
+	color:#f44280;
+	font-size:15px;
+	text-decoration: none;
+
+}
+
+/* ********** SCROLL STYLING ********** */
+::-webkit-scrollbar {
+	width:5px;
+}
+
+::-webkit-scrollbar:horizontal {
+	width:0px;
+}
+ 
+::-webkit-scrollbar-button {
+      background-color: #000;
+} /* optionally, you can style the top and the bottom buttons (left and right for horizontal bars) */
+ 
+::-webkit-scrollbar-track {
+      background-color: turquoise;
+} /* the new scrollbar will have a flat appearance with the set background color */
+
+::-webkit-scrollbar-thumb {
+	background-color: #000;
+}
+
+/* ********** GOOGLE MAPS ********** */
+
+#map-display {
+	height:500px;
+	width:100%;
+	border-color:turquoise;
+	border-width: 2px;
+	border-style: solid;
+	overflow:visible;
+}
+
+/* ********** TWITTER ********** */
+#twitter-display {
+	background-color: transparent;
+	height:399px;
+	overflow-y:hidden;
+	overflow-x:hidden;
+	margin-top:0%;
+
+	padding:0%;
+	border-color:turquoise;
+	border-width: 2px;
+	border-style: solid;
+}
+
+#twit-container {
+	height:399px;
+}
+
+/* ********** YOUTUBE ********** */
+#youtube-display {
+	background-color:transparent;
+
+	border-color:turquoise;
+	border-width: 2px;
+	border-style: solid;
+
+	height:399px;
+}
+
 /* ********** MEDIA QUERIES ********** */
 
 @media screen and (max-width:1200px) {
@@ -314,16 +514,27 @@ button.btn.btn-default:hover {
 	#form1 {
 		display:none;
 	}
+	.titleimg {
+		width:80%;
+		margin-top:15%;
+	}
+
+	.titleimg2 {
+		width:60%;
+		margin-top:15%;
+	}
 }
 
 @media screen and (max-width:432px) {
-	
+
+	/*	
 	div.name {
 		height:100px;
 		width:90%;
 		margin:0 auto;
 	}
-
+	*/
+	
 	nav.smnav {
 		margin-top:3%;
 		margin-left:10%;
@@ -332,14 +543,18 @@ button.btn.btn-default:hover {
 		margin:0 auto;
 	}
 
-	h3#teamname {
+	h3.teamname {
 
 		display:block;
 		float:left;
 		width:100%;
 		margin:0 auto;
-		padding:1%;
-		border:0;
+		padding:10%;
+		
+		border-width: 2px;
+		border-style: solid;
+		border-color:white;
+
 	}
 	
 	.socialmedia {
@@ -351,15 +566,31 @@ button.btn.btn-default:hover {
 		display:inline-block;
 		margin:2%;
 	}
+
+	#ytplayer {
+		width:70%;
+	}
+
+	.titleimg {
+	width:100%;
+	margin-top:30%;
+	}
+
+	.titleimg2 {
+		width:90%;
+		margin-top:20%;
+	}
 }
 
 @media screen and (min-width:433px) and (max-width:768px) {
 	
+	/*
 	div.name {
 		height:30px;
 		width:100%;
 		margin:0 auto;
 	}
+	*/
 
 	nav.smnav {
 		margin-top:3%;
@@ -386,5 +617,15 @@ button.btn.btn-default:hover {
 	.smicon {
 		display:block;
 		float:left;
+	}
+
+	.titleimg {
+	width:100%;
+	margin-top:20%;
+	}
+
+	.titleimg2 {
+		width:70%;
+		margin-top:20%;
 	}
 }

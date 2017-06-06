@@ -22,7 +22,32 @@
 
 	<!-- Custom CSS -->
 	<link rel="stylesheet" type="text/css" href="assets/css/main.css">
- 
+
+	<!-- JQUERY LINK -->
+	<script
+	src="https://code.jquery.com/jquery-3.2.1.min.js"
+	integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+	crossorigin="anonymous"></script>
+
+	<!-- MOMENT JS LINK -->
+	<script type="text/javascript" src="assets/javascript/moment.js"></script>
+
+	<!-- GOOGLE MAPS -->
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB43DIM7NUjL0ANjSIvkYugJTswelle_r0&callback=initMap">
+    </script>
+
+    <!-- YOUTUBE -->
+    <script src="https://apis.google.com/js/api.js"></script>
+
+	<!-- okayNav JS -->
+	<script type="text/javascript" src="assets/javascript/jquery.okayNav.min.js"></script>
+
+	<!-- SCROLL JS LINK -->
+	<script type="text/javascript" src="assets/javascript/scroll.js"></script>
+
+	<!-- CUSTOM JS LINK -->
+	<script type="text/javascript" src="assets/javascript/logic.js"></script>
+	
  </head>
 
 
@@ -58,39 +83,46 @@
 				  			</div>
 				  			<button type="submit" class="btn btn-default" id="search">search</button>
 			  			</form>
-			  			<div class="search-error"></div>
+			
 			  			<form id="form2">
 				  			<div class="form-group">
 				  				<input type="text" class="form-control" id="artist-input" placeholder="Search for Artist/Band">
 				  			</div>
 				  			<button type="submit" class="btn btn-default" id="search">search</button>
 			  			</form>
-			  			<div class="search-error"></div>
+
 		  			</div>
 	  			</div>
   			</div>
   		</div>
 	</div>
 
-<div class="cosmos">
+<div class="cosmosindex">
 	<div class="container" id="bottom">
 		<div id="content-div">
   				<div class="row" style="margin-top: 180px;">
   					<div class="col-md-12">
 	  					<form class="form-inline" id="form1">
+
+	  						<div class="search-error"></div>
+
 				  			<div class="form-group">
-				  				<input type="text" class="form-control" id="artist-input" placeholder="Search for Artist/Band">
+				  				<input type="text" class="form-control" id="artist-input2" placeholder="Search for Artist/Band">
 				  			</div>
-				  			<button type="submit" class="btn btn-default" id="search">search</button>
+				  			<button type="submit" class="btn btn-default" id="search2">search</button>
+
 			  			</form>
-			  			<div class="search-error"></div>
+
 			  			<form id="form2">
+				  			
+				  			<div class="search-error"></div>
+
 				  			<div class="form-group">
-				  				<input type="text" class="form-control" id="artist-input" placeholder="Search for Artist/Band">
+				  				<input type="text" class="form-control" id="artist-input2" placeholder="Search for Artist/Band">
 				  			</div>
-				  			<button type="submit" class="btn btn-default" id="search">search</button>
+				  			<button type="submit" class="btn btn-default" id="search2">search</button>
+
 			  			</form>
-			  			<div class="search-error"></div>
 		  			</div>
 	  			</div>
 
@@ -109,11 +141,9 @@
 				</section>
 			</div>
 
-<!-- 	Div for Spotify -->	
-			<div class="col-md-4" style="padding: 5px">
-				<section class="panel panel-body" id="spotify-display">
-				</section>
-			</div>
+		</div>
+
+		<div class="row">
 
 <!-- 	Div for Twitter -->	
 			<div class="col-md-4">
@@ -125,39 +155,34 @@
 						</script>
 					</div>
 				</section>
-			</div>
-		</div>
-		</div>
-	</div>
+			</div> <!-- twitter end -->
+
+			<!-- 	Div for Youtube -->	
+			<div class="col-md-8">
+				<section class="panel panel-body" id="youtube-display">
+
+					<!-- YT Iframe -->
+					<iframe id="ytplayer" 
+							type="text/html"
+							width="640" 
+							height="360"  
+							frameborder="0"
+							>
+					</iframe>
+
+				</section>
+			</div> <!-- spotify end -->
+
+			</div> <!-- row end -->
+		</div> <!-- content-div end -->
+		</div> <!-- container end -->
+	</div> <!-- cosmoindex end -->
 </div>
-
-	<!-- JQUERY LINK -->
-	<script
-	src="https://code.jquery.com/jquery-3.2.1.min.js"
-	integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-	crossorigin="anonymous"></script>
-
-	<!-- okayNav JS -->
-	<script type="text/javascript" src="assets/javascript/jquery.okayNav.min.js"></script>
 
 	<!-- initialize okayNav -->
     <script type="text/javascript">
         var navigation = $('#nav-main').okayNav();
     </script>
-
-	<!-- MOMENT JS LINK -->
-	<script type="text/javascript" src="assets/javascript/moment.js"></script>
-
-	<!-- CUSTOM JS LINK -->
-	<script type="text/javascript" src="assets/javascript/logic.js"></script>
-
-	<!-- SPOTIFY JS LINK -->
-	<script type="text/javascript" src="assets/javascript/spotify.js"></script>
-
-	<!-- SCROLL JS LINK -->
-	<script type="text/javascript" src="assets/javascript/scroll.js"></script>
-
-
 
 </body>
 </html>
