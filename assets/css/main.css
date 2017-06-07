@@ -207,12 +207,23 @@ li a {
 }
 
 .okayNav__nav--visible a:hover {
-	color:turquoise;
+	color:#40E0D0;
 }
 
 .nav>li>a:focus, .nav>li>a:hover {
 	background-color: transparent;
 }
+
+#header #nav-main ul li a:hover {
+	font-family:"Roboto", "Helvetica Neue", Helvetica;
+	color:#40E0D0;
+	text-decoration: none;
+}
+
+#header #nav-main a.okayNav__menu-toggle.icon--active {
+	color:#40E0D0;
+}
+
 
 /*
 nav.smnav {
@@ -319,7 +330,7 @@ button.btn.btn-default {
 	
 	border-radius:25px;
 	border-style: solid;
-	border-color: turquoise;
+	border-color: #40E0D0;
 	border-width:2px;
 }
 
@@ -371,7 +382,7 @@ button.btn.btn-default:hover {
 	overflow-y:scroll;
 	overflow-x:hidden;
 
-	border-color:turquoise;
+	border-color:#40E0D0;
 	border-width: 2px;
 	border-style: solid;
 }
@@ -448,7 +459,7 @@ div.searchResultsContent {
 } /* optionally, you can style the top and the bottom buttons (left and right for horizontal bars) */
  
 ::-webkit-scrollbar-track {
-      background-color: turquoise;
+      background-color: #40E0D0;
 } /* the new scrollbar will have a flat appearance with the set background color */
 
 ::-webkit-scrollbar-thumb {
@@ -460,7 +471,7 @@ div.searchResultsContent {
 #map-display {
 	height:500px;
 	width:100%;
-	border-color:turquoise;
+	border-color:#40E0D0;
 	border-width: 2px;
 	border-style: solid;
 	overflow:visible;
@@ -475,7 +486,7 @@ div.searchResultsContent {
 	margin-top:0%;
 
 	padding:0%;
-	border-color:turquoise;
+	border-color:#40E0D0;
 	border-width: 2px;
 	border-style: solid;
 }
@@ -488,7 +499,7 @@ div.searchResultsContent {
 #youtube-display {
 	background-color:transparent;
 
-	border-color:turquoise;
+	border-color:#40E0D0;
 	border-width: 2px;
 	border-style: solid;
 

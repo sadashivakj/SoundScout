@@ -9,34 +9,39 @@ $(document).ready(function(event) {
             	})    
 
         	});
-	});
-
-	var ww = $(window).width();
+	
+        var ww = $(window).width();
             
-       	if(ww <768) {
+           	if (ww <768) {
 
-            console.log("click");
-            $("#form2").on("click", "#search", function(search) {
-            search.preventDefault();
-                console.log("inside click function");
-                $(".jumbotron").hide("slow", function() {
-                    console.log("jumbotron hide");
-                        $("#bottom").show();
-                    })    
-        	})
-        }
+                console.log("click");
+                $("#form2").on("click", "#search", function(search) {
+                search.preventDefault();
+                    console.log("inside click function");
+                    $(".jumbotron").hide("slow", function() {
+                        console.log("jumbotron hide");
+                            $("#bottom").show();
+                        })    
+            	})
+            } // end of if statement
 
        $(window).resize(function(event) {
-        var ww = $(window).width();
-            if(ww <768) {
-                console.log("click");
-                 $("#form2").on("click", "#search", function(search) {
-                search.preventDefault();
-                console.log("inside click function");
-                $(".jumbotron").hide("slow", function() {
-                    console.log("jumbotron hide");
-                        $("#bottom").show();
-                    })    
-        })
-        }
-        })
+            var ww = $(window).width();
+                if(ww <768) {
+                    console.log("click");
+                    
+                    $("#form2").on("click", "#search", function(search) {
+                        search.preventDefault();
+                        
+                        console.log("inside click function");
+                        
+                        $(".jumbotron").hide("slow", function() {
+                            console.log("jumbotron hide");
+                            $("#bottom").show();
+                            
+                        });   
+                    });
+            }
+        }); // end of window resize
+
+}); // end of document ready

@@ -3,6 +3,8 @@
 
 // GLOBAL VARIABLES ==========================================
 
+'use strict';
+
 var map;
 var countryCode = "US";
 var dateOrder = "date,asc";
@@ -265,6 +267,7 @@ $(document).ready(function(){
 	});
 
 });
+
 /*
 * panel content (grab from under events ajax call)
 * concert name
