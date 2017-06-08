@@ -91,6 +91,16 @@ div.socialmedia {
 	margin:0 auto;
 }
 
+div#twitter-error {
+	margin-top:50%;
+	background-color:transparent;
+}
+
+div#youtube-error {
+	margin-top:25%;
+	background-color:transparent;
+}
+
 /* ********** TEXT ********** */
 
 @font-face {
@@ -161,8 +171,6 @@ h4 {
 	font-family:'Roboto', 'Helvetica Neue', Helvetica;
 	font-size:25px;
 	margin:3%;
-	margin-top:50%;
-
 }
 
 .search-error {

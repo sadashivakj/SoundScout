@@ -13,20 +13,12 @@ var sixMonthsLimit = moment().add(6, "months").format("YYYY-MM-DDTHH:mm:ss");
 
 // FUNCTIONS =================================================
 
-// This function won't run inside the $(document).ready()
-function initMap(){
-	var uluru = {lat: 39.114171, lng: -94.627457};	//Center is Kansas City
-    map = new google.maps.Map(document.getElementById('map-display'), {
-        zoom: 4,
-        center: uluru
-    });
-
-    //infowindow = new google.maps.InfoWindow({content: "Hello !"});
-}
 
 $(document).ready(function(){
 
 	$('#bottom').hide();
+	$('#youtube-error').hide();
+	$('#twitter-error').hide();
 
 		// TWITTER FUNCTION 
 		function twitter(twitterURL){
@@ -47,7 +39,8 @@ $(document).ready(function(){
 		  		});
 			}
 			catch(e) {
-				$('#twitter-display').html("<h4>Sorry, this Twitter account is unavailable.</h4>");
+				$('#twitter-error').show();
+				$('#twitter-error').html("<h4>Sorry, this Twitter account is unavailable.</h4>");
 			}
 		}
 
@@ -65,7 +58,8 @@ $(document).ready(function(){
 			}
 
 			catch(e) {
-				$('#youtube-display').html("<h4>Sorry, this Youtube Channel is unavailable.</h4>");
+				$('#youtube-error').show();
+				$('div#youtube-error').html("<h4>Sorry, this Youtube Channel is unavailable.</h4>");
 			}
 		}
 
@@ -221,8 +215,11 @@ $(document).ready(function(){
 				
 				if (artistResponse._embedded.attractions[0].externalLinks === undefined){
 					// if the artist doesn't have any external links
-					$("#twitcontainer").html("<h4>Sorry, this artist/band doesn't have twitter!</h4>");
-					$("#youtube-display").html("<h4>Sorry, this artist/band doesn't have youtube!</h4>");
+					$('#twitter-error').show();
+					$('#youtube-error').show();
+
+					$("div#twitter-error").html("<h4>Sorry, this artist/band doesn't have twitter!</h4>");
+					$("div#youtube-error").html("<h4>Sorry, this artist/band doesn't have youtube!</h4>");
 				}
 				else {
 					// Grabbing the artist's twitter url and calling the twitter function
@@ -343,6 +340,10 @@ $(document).ready(function(){
 		$("#twitcontainer").empty();
 		$("#concerts-display").empty();
 		$("iframe").attr("src", "");
+		$("div#youtube-error").empty();
+		$("div#youtube-error").hide();
+		$("div#twitter-error").empty();
+		$("div#twitter-error").empty();
 
 		// console.log("Artist: " + artist);
 
@@ -353,7 +354,6 @@ $(document).ready(function(){
 	$('#search2').on("click", function(event){ 
 		event.preventDefault();
 
-		// $('#bottom').show();
 		initMap();
 
 		// This is the user's input
@@ -363,6 +363,10 @@ $(document).ready(function(){
 		$("#twitcontainer").empty();
 		$("#concerts-display").empty();
 		$("iframe").attr("src", "");
+		$("div#youtube-error").empty();
+		$("div#youtube-error").hide();
+		$("div#twitter-error").empty();
+		$("div#twitter-error").hide();
 
 		console.log("Artist: " + artist);
 
@@ -371,6 +375,17 @@ $(document).ready(function(){
 	});
 
 });
+
+// This function won't run inside the $(document).ready()
+function initMap(){
+	var uluru = {lat: 39.114171, lng: -94.627457};	//Center is Kansas City
+    map = new google.maps.Map(document.getElementById('map-display'), {
+        zoom: 4,
+        center: uluru
+    });
+
+    //infowindow = new google.maps.InfoWindow({content: "Hello !"});
+}
 
 /*
 * panel content (grab from under events ajax call)
