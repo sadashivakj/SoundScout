@@ -60,7 +60,8 @@ $(document).ready(function(){
 			console.log("youtubeUser: " + youtubeUser);
 
 			try {
-				$('iframe').attr("src", "https://www.youtube.com/embed?enablejsapi=1&controls=2&showinfo=1&rel=0&listType=user_uploads&list=" + youtubeUser);
+				
+				$('#ytplayer').attr("src", "https://www.youtube.com/embed?enablejsapi=1&controls=2&showinfo=1&rel=0&listType=user_uploads&list=" + youtubeUser);
 			}
 
 			catch(e) {
@@ -142,7 +143,7 @@ $(document).ready(function(){
 
 		//ARTIST INFORMATION
 		function ticketmasterRequest(artist){
-			console.log("Artist: " + artist);
+			// console.log("Artist: " + artist);
 
 			// This will be the URL to obtain the the unique attractionId for the artist 
 			// We need this so we can find the upcoming events for the exact artist
@@ -162,7 +163,7 @@ $(document).ready(function(){
 				if (checkArtist === 0) {
 					// This is the message for the user, uncomment when .search-error is added to html
 					$(".search-error").html("*Sorry, try again");
-					console.log("Sorry, try again");
+					// console.log("Sorry, try again");
 				}
 				else {
 					var artistId = artistResponse._embedded.attractions[0].id; 
@@ -184,10 +185,10 @@ $(document).ready(function(){
 							// Display this message to the user if there are no shows
 							$("#concerts-display").html("<h4>Sorry, it seems there are no upcoming shows. Please try again at a later time or search for another artist/band.</h4>");
 
-							console.log("It seems there are no upcoming shows");
+							// console.log("It seems there are no upcoming shows");
 						}
 						else {
-							console.log(eventsResponse);
+							// console.log(eventsResponse);
 
 							concertInformation(eventsResponse);
 
@@ -216,29 +217,30 @@ $(document).ready(function(){
 							}
 						}
 					});
+				}
 				
-					if (artistResponse._embedded.attractions[0].externalLinks === undefined){
-						// if the artist doesn't have any external links
-						$("#twitcontainer").html("<h4>Sorry, this artist/band doesn't have twitter!</h4>");
-						$("#youtube-display").html("<h4>Sorry, this artist/band doesn't have youtube!</h4>");
-					}
+				if (artistResponse._embedded.attractions[0].externalLinks === undefined){
+					// if the artist doesn't have any external links
+					$("#twitcontainer").html("<h4>Sorry, this artist/band doesn't have twitter!</h4>");
+					$("#youtube-display").html("<h4>Sorry, this artist/band doesn't have youtube!</h4>");
+				}
+				else {
+					// Grabbing the artist's twitter url and calling the twitter function
+					var twitterURL = artistResponse._embedded.attractions[0].externalLinks.twitter[0].url;
+					// console.log(twitterURL);
+					twitter(twitterURL);
 
-					else {
-						// Grabbing the artist's twitter url and calling the twitter function
-						var twitterURL = artistResponse._embedded.attractions[0].externalLinks.twitter[0].url;
-						// console.log(twitterURL);
-						twitter(twitterURL);
-
-						// Grabbing the artist's youtube url and calling the youtube function
-						var youtubeURL = artistResponse._embedded.attractions[0].externalLinks.youtube[0].url;
-						youtube(youtubeURL);
-
-					}
-
+					// Grabbing the artist's youtube url and calling the youtube function
+					var youtubeURL = artistResponse._embedded.attractions[0].externalLinks.youtube[0].url;
+					youtube(youtubeURL);
 
 				}
-			});
+
+			});	
+
+				
 		}
+		
 
 	// FUNCTION ADDED BY SADA ====================================
 
@@ -341,7 +343,7 @@ $(document).ready(function(){
 		$("#twitcontainer").empty();
 		$("#concerts-display").empty();
 
-		console.log("Artist: " + artist);
+		// console.log("Artist: " + artist);
 
 		ticketmasterRequest(artist);
 
