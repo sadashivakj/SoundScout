@@ -25,14 +25,6 @@ $(document).ready(function(){
 
 	$('#bottom').hide();
 
-		// LOADING FUNCTION
-
-		
-
-
-
-		/////////////////////////////////////////////
-
 		// TWITTER FUNCTION 
 		function twitter(twitterURL){
 			console.log("twitterURL: " + twitterURL);
