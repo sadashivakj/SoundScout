@@ -178,7 +178,7 @@ $(document).ready(function(){
 						// If there are no concerts, alert the user. Otherwise, continue...
 						if (upcomingEvents === 0) {
 							// Display this message to the user if there are no shows
-							$("#concerts-display").html("<h4>Sorry, it seems there are no upcoming shows. Please try again at a later time or search for another artist/band.</h4>");
+							$("#concerts-display").html("<h4 id='concerts-error'>Sorry, it seems there are no upcoming shows. Please try again at a later time or search for another artist/band.</h4>");
 
 							// console.log("It seems there are no upcoming shows");
 						}
