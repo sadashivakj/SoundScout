@@ -26,6 +26,12 @@
 	<!-- Google Font -->
 	<link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
 
+	<!-- JQUERY LINK -->
+	<script
+	src="https://code.jquery.com/jquery-3.2.1.min.js"
+	integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+	crossorigin="anonymous"></script>
+
 	<!-- Search history JS LINK -->
 	 <script src="assets/javascript/sh.js"></script>
 
@@ -51,6 +57,21 @@
 				 		    
 		</nav>
 	</header>
+
+	<!-- Recent Searches Popup Window -->
+	<div class="popup" data-popup="popup-1">
+	    <div class="popup-inner">
+	        <h2>Most recent searches</h2>
+	        <table id="internalActivities">
+
+	</table>
+	<input type="button" id="seeMoreRecords" value="More">
+	<input type="button" id="seeLessRecords" value="Less">
+	        <a class="popup-close" data-popup-close="popup-1" href="#">x</a>           
+	                
+	    </div>
+	</div> 
+
 
 	<div class="jumbotron cosmosindex">
 		<div id="aboutshadow">
