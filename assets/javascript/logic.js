@@ -3,12 +3,13 @@
 
 // GLOBAL VARIABLES ==========================================
 
-'use strict';
+//'use strict';
 
 var map;
 var countryCode = "US";
 var dateOrder = "date,asc";
 var sixMonthsLimit = moment().add(6, "months").format("YYYY-MM-DDTHH:mm:ss");
+//var infowindow;
 
 // FUNCTIONS =================================================
 
@@ -19,6 +20,8 @@ function initMap(){
         zoom: 4,
         center: uluru
     });
+
+    //infowindow = new google.maps.InfoWindow({content: "Hello !"});
 }
 
 $(document).ready(function(){
@@ -77,8 +80,8 @@ $(document).ready(function(){
 			var time;
 			var formatTime;
 
-			for (var i = 0; i < 10 && i < eventsResponse._embedded.events.length; i++) {
-
+			//for (var i = 0; i < 10 && i < eventsResponse._embedded.events.length; i++) {
+            for (var i = 0; i < eventsResponse._embedded.events.length; i++) {
 				// grab concert name from each event
 				concertName = eventsResponse._embedded.events[i].name;
 				// console.log("concert " + (i+1) + " name: " + concertName);
@@ -207,6 +210,8 @@ $(document).ready(function(){
 										position: {lat: lat, lng: long},
 										map: map
 									});
+									// addMarker(lat, long, eventsResponse._embedded.events[i].name, 
+									// 	eventsResponse._embedded.events[i]);
 								}
 							}
 						}
@@ -234,6 +239,92 @@ $(document).ready(function(){
 				}
 			});
 		}
+
+	// FUNCTION ADDED BY SADA ====================================
+
+	// This function will add a marker to the map and push to the array.
+    // It will also initialize the infowindow and display the same
+   // function addMarker(latitude, longitude, name, eventsResponse) {
+       
+   //      //initialize and create the marker per longitude and latitude values
+   //      var marker = new google.maps.Marker({
+   //      	position: {
+   //          	lat: latitude,
+   //          	lng: longitude
+   //       	},
+   //       	map: map,
+   //       	title: name
+   //     	});
+
+       	//populate the content to be displayed in the infoWindow
+       	//var builtContent = buildContent(name, eventsResponse);
+
+       	//create and open the infoWindow when marker is clicked
+       	// if(builtContent !== null && builtContent !== ""){
+        // 	google.maps.event.addListener(marker, 'click', function(){
+        //        infowindow.setContent(builtContent);
+        //        infowindow.open(map, this);
+        //    	});      
+       	// }
+
+       //push the marker to the array object
+       //markerArr.push(marker);
+   	// }
+
+   	// function buildContent(name, eventsResponse){
+
+   	// console.log("inside buildContent function");
+
+    //     if(eventsResponse !== null){
+    //         var buyTicket = "", dateOfEvent = "", venueName = "", postalCode = "";
+    //         var    city = "", state = "", address = "", infoWindowContent = "";
+             
+    //         if(eventsResponse.url !== null && eventsResponse.url !== ""){
+    //             buyTicket = eventsResponse.url;
+    //         }
+             
+    //         if(eventsResponse.dates.start.localDate !== null
+    //                     && eventsResponse.dates.start.localDate !== ""){
+    //             dateOfEvent = eventsResponse.dates.start.localDate;
+    //             dateOfEvent = moment(dateOfEvent).format("MM-DD-YYYY");
+    //         }
+            
+    //         if(eventsResponse._embedded.venues[0].name !== null
+    //             && eventsResponse._embedded.venues[0].name !== ""){
+    //             venueName = eventsResponse._embedded.venues[0].name;
+    //         }
+
+    //         if(eventsResponse._embedded.venues[0].postalCode !== null &&
+    //                 eventsResponse._embedded.venues[0].postalCode !== ""){
+    //             postalCode = eventsResponse._embedded.venues[0].postalCode;
+    //         }
+
+    //         if(eventsResponse._embedded.venues[0].city.name !== null &&
+    //             eventsResponse._embedded.venues[0].city.name !== ""){
+    //             city = eventsResponse._embedded.venues[0].city.name;
+    //         }
+            
+    //         if(eventsResponse._embedded.venues[0].state.name !== null &&
+    //                 eventsResponse._embedded.venues[0].state.name !== ""){
+    //             state = eventsResponse._embedded.venues[0].state.name;
+    //         }
+            
+    //         if(eventsResponse._embedded.venues[0].address.line1 !== null &&
+    //                 eventsResponse._embedded.venues[0].address.line1 !== ""){
+    //             address = eventsResponse._embedded.venues[0].address.line1;
+    //         }
+            
+    //         infoWindowContent =
+    //             '<div style="text-align: center;"> <h2><b>' +venueName+ ' </b></h2>' +
+    //            '<div style="text-align: center;"> <p>' +address+ ' , ' +city+ ' , '
+    //                                +state+ ' , ' +postalCode+ ' </b></p>' +
+    //            '<p>Event Date  : ' +dateOfEvent+ '</p>' +
+    //            '<a href="http://www.google.com/maps/search/'+venueName+',' +address+',' +city+',' +state+',' +postalCode+'" target="_blank">Directions</a></p> </div>' ;
+    //     }
+        
+    //     console.log("infoWindowContent - "+infoWindowContent);
+    //     return infoWindowContent;
+    // }
 
 	// MAIN PROCESSES ============================================
 
