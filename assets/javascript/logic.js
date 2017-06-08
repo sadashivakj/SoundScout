@@ -223,13 +223,29 @@ $(document).ready(function(){
 					}
 					else {
 						// Grabbing the artist's twitter url and calling the twitter function
-						var twitterURL = artistResponse._embedded.attractions[0].externalLinks.twitter[0].url;
-						// console.log(twitterURL);
-						twitter(twitterURL);
+						if (artistResponse._embedded.attractions[0].externalLinks.twitter === undefined) {
+							$('#twitter-error').show();
+							$("div#twitter-error").html("<h4>Sorry, this artist/band doesn't have twitter!</h4>");
+						}
 
-						// Grabbing the artist's youtube url and calling the youtube function
-						var youtubeURL = artistResponse._embedded.attractions[0].externalLinks.youtube[0].url;
-						youtube(youtubeURL);
+						else {
+							var twitterURL = artistResponse._embedded.attractions[0].externalLinks.twitter[0].url;
+							// console.log(twitterURL);
+							twitter(twitterURL);
+
+						}
+
+						if (artistResponse._embedded.attractions[0].externalLinks.youtube === undefined) {
+							$('#youtube-error').show();
+							$("div#youtube-error").html("<h4>Sorry, this artist/band doesn't have youtube!</h4>");
+
+						}
+
+						else {
+							// Grabbing the artist's youtube url and calling the youtube function
+							var youtubeURL = artistResponse._embedded.attractions[0].externalLinks.youtube[0].url;
+							youtube(youtubeURL);
+						}
 
 					}
 
