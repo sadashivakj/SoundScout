@@ -212,27 +212,30 @@ $(document).ready(function(){
 							}
 						}
 					});
+				
+					if (artistResponse._embedded.attractions[0].externalLinks === undefined){
+						// if the artist doesn't have any external links
+						$('#twitter-error').show();
+						$('#youtube-error').show();
+
+						$("div#twitter-error").html("<h4>Sorry, this artist/band doesn't have twitter!</h4>");
+						$("div#youtube-error").html("<h4>Sorry, this artist/band doesn't have youtube!</h4>");
+					}
+					else {
+						// Grabbing the artist's twitter url and calling the twitter function
+						var twitterURL = artistResponse._embedded.attractions[0].externalLinks.twitter[0].url;
+						// console.log(twitterURL);
+						twitter(twitterURL);
+
+						// Grabbing the artist's youtube url and calling the youtube function
+						var youtubeURL = artistResponse._embedded.attractions[0].externalLinks.youtube[0].url;
+						youtube(youtubeURL);
+
+					}
+
 				}
 				
-				if (artistResponse._embedded.attractions[0].externalLinks === undefined){
-					// if the artist doesn't have any external links
-					$('#twitter-error').show();
-					$('#youtube-error').show();
-
-					$("div#twitter-error").html("<h4>Sorry, this artist/band doesn't have twitter!</h4>");
-					$("div#youtube-error").html("<h4>Sorry, this artist/band doesn't have youtube!</h4>");
-				}
-				else {
-					// Grabbing the artist's twitter url and calling the twitter function
-					var twitterURL = artistResponse._embedded.attractions[0].externalLinks.twitter[0].url;
-					// console.log(twitterURL);
-					twitter(twitterURL);
-
-					// Grabbing the artist's youtube url and calling the youtube function
-					var youtubeURL = artistResponse._embedded.attractions[0].externalLinks.youtube[0].url;
-					youtube(youtubeURL);
-
-				}
+				
 
 			});	
 
@@ -368,6 +371,8 @@ $(document).ready(function(){
 		$("div#youtube-error").hide();
 		$("div#twitter-error").empty();
 		$("div#twitter-error").hide();
+		$(".search-error").empty();
+
 
 		console.log("Artist: " + artist);
 
