@@ -342,6 +342,7 @@ $(document).ready(function(){
 		$("#artist-input").val("");
 		$("#twitcontainer").empty();
 		$("#concerts-display").empty();
+		$("iframe").attr("src", "");
 
 		// console.log("Artist: " + artist);
 
@@ -361,6 +362,7 @@ $(document).ready(function(){
 		$("#artist-input2").val("");
 		$("#twitcontainer").empty();
 		$("#concerts-display").empty();
+		$("iframe").attr("src", "");
 
 		console.log("Artist: " + artist);
 
