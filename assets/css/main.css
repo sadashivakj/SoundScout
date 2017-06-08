@@ -181,6 +181,24 @@ h4 {
 	margin:0 auto;
 }
 
+/********** Google Maps Window ***********/
+
+.gmapswindow h2 {
+	color:#000;
+	font-family:"Abeat by Kai", sans-serif;
+	letter-spacing: 2px;
+}
+
+.gmapswindow p {
+	color: #000;
+	font-family: "Roboto", "Helvetica Neue", Helvetica;
+}
+
+.gmapswindow a {
+	color:#40E0D0;
+	font-family:"Roboto", "Helvetica Neue", Helvetica;
+}
+
 /* ********** NAVIGATION ********** */
 
 header {
