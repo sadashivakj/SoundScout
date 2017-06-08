@@ -125,7 +125,7 @@
 <div class="cosmosindex">
 	<div class="container" id="bottom">
 		<div id="content-div">
-  				<div class="row" id="searchRow">
+  			<div class="row" id="searchRow">
   					<div class="col-md-12">
 	  					<form class="form-inline" id="form1">
 
@@ -149,63 +149,73 @@
 
 			  			</form>
 		  			</div>
-	  			</div>
+	  		</div>
 
-<!-- 	Section for our content -->	
-		<div class="row">
+			<div class="row">
+				<div class="col-md-4">
+					<h2>UPCOMING CONCERTS</h2>
+				</div>
+					<!-- 	Div for our input from Ticketmaster.-->	
+				<div class="col-md-8" style="padding: 5px">
+					<section class="panel panel-body" id="concerts-display"></section>
+				</div>
+			</div> <!-- Concerts Row -->
 
-<!-- 	Div for our input from Ticketmaster.-->	
-			<div class="col-md-4" style="padding: 5px">
+			<div class="row">
+				<div class="col-md-4">
+					<h2>LOCATIONS</h2>
+				</div>
+				<!-- 	Div for Google Map -->	
+				<div class="col-md-8" style="padding: 5px">
+					<section class="panel panel-body" id="map-display"></section>
+				</div>
+			</div> <!-- Locations Row -->
 
-				<section class="panel panel-body" id="concerts-display">
-				</section>
-			</div>
+			<div class="row">
+				<div class="col-md-4">
+					<h2>TWITTER</h2>
+				</div>
+				<!-- 	Div for Twitter -->	
+				<div class="col-md-8">
+					<section class="panel panel-body" id="twitter-display">
+						<div id="twitter-error">
+						</div>
+						<div id="twitcontainer" style="height: 800px; overflow: auto;">
 
-<!-- 	Div for Google Map -->	
-			<div class="col-md-8" style="padding: 5px">
-				<section class="panel panel-body" id="map-display">
-				</section>
-			</div>
+							<script>
+								!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+							</script>
+						</div>
+					</section>
+				</div> <!-- twitter display -->
+			</div> <!-- Twitter Row -->
 
-		</div>
+			<div class="row">
+				<div class="col-md-4">
+					<h2>MUSIC PREVIEW</h2>
+				</div>
+				<!-- 	Div for Youtube -->	
+				<div class="col-md-8">
+					<section class="panel panel-body" id="youtube-display">
 
-		<div class="row">
+						<!-- Div for Youtube Error Msg -->
+						<div id="youtube-error">
+						</div>
 
-<!-- 	Div for Twitter -->	
-			<div class="col-md-4">
-				<section class="panel panel-body" id="twitter-display">
-					<div id="twitter-error">
-					</div>
-					<div id="twitcontainer" style="height: 800px; overflow: auto;">
+						<!-- YT Iframe -->
+						<iframe id="ytplayer" 
+								type="text/html"
+								width="640" 
+								height="360"  
+								frameborder="0"
+								>
+						</iframe>
 
-						<script>
-							!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
-						</script>
-					</div>
-				</section>
-			</div> <!-- twitter end -->
+					</section>
+				</div> <!-- youtube display -->
+			</div> <!-- youtube row -->
 
-			<!-- 	Div for Youtube -->	
-			<div class="col-md-8">
-				<section class="panel panel-body" id="youtube-display">
-
-					<!-- Div for Youtube Error Msg -->
-					<div id="youtube-error">
-					</div>
-
-					<!-- YT Iframe -->
-					<iframe id="ytplayer" 
-							type="text/html"
-							width="640" 
-							height="360"  
-							frameborder="0"
-							>
-					</iframe>
-
-				</section>
-			</div> <!-- spotify end -->
-
-			</div> <!-- row end -->
+			
 		</div> <!-- content-div end -->
 		</div> <!-- container end -->
 	</div> <!-- cosmoindex end -->
