@@ -353,7 +353,7 @@ $(document).ready(function(){
 	$('#search2').on("click", function(event){ 
 		event.preventDefault();
 
-		$('#bottom').show();
+		// $('#bottom').show();
 		initMap();
 
 		// This is the user's input
