@@ -438,8 +438,13 @@ div#searchResults {
 }
 
 div#searchResults.panel-heading {
-	border-width:0 0 1px 0;
-	border-color:#f44280;
+    border-width:0 0 1px 0;
+    border-color:#f44280 ;
+    content: "";
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+    padding-top: 20px;
 }
 
 h3.searchResultsTitle {
