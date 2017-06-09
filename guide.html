@@ -7,7 +7,7 @@
 	<meta charset="UTF-8">
 	<meta name ="viewport" content="width=device-width, initial-scale=1">
 
-	<!-- Firbase-->
+	<!-- Firebase-->
 	<script src="https://www.gstatic.com/firebasejs/4.1.1/firebase.js"></script>
 
 	<!-- Bootstrap -->
@@ -49,7 +49,6 @@
 		</a>
 
 		<nav role="navigation" class="okayNav" id="nav-main">			
-
 	      	<ul class="nav navbar-nav navbar-right">
 	       		<li><a href="about.html">ABOUT</a></li>
 	        	<li><a href="guide.html">GUIDE</a></li>
@@ -66,28 +65,30 @@
 	        <h2>Most recent searches</h2>
 	        <table id="internalActivities">
 
-	</table>
-	<input type="button" id="seeMoreRecords" value="More">
-	<input type="button" id="seeLessRecords" value="Less">
-	        <a class="popup-close" data-popup-close="popup-1" href="#">x</a>           
-	                
+			</table>
+			<input type="button" id="seeMoreRecords" value="More">
+			<input type="button" id="seeLessRecords" value="Less">
+	        <a class="popup-close" data-popup-close="popup-1" href="#">x</a>                           
 	    </div>
-	</div> 
+	</div> <!-- popup window -->
 
 	<div class="cosmos">
 	<div class="container">
+
 		<div class="row">
 			<div class="col-md-12">
 			<img src="assets/images/ss-guide.png" class="titleimg" align="SoundScout Guide">
 			</div>
 		</div>
 
+		<!-- search guide -->
 		<div class="row">
 			<div class="col-md-12">
 				<p class="guide"><span class="numbers">&#9312;</span><span class="sectionName"> Search: </span>Enter the name of your favorite artist or group.</p>
 			</div>
 		</div>
 
+		<!-- upcoming concerts guide -->
 		<div class="row">
 			<div class="col-md-8">
 				<p class="guide"><span class="numbers">&#9313;</span><span class="sectionName"> Upcoming Concerts: </span>Learn the details of the upcoming concerts in the next 6 months</p>
@@ -97,6 +98,7 @@
 			</div>
 		</div>
 
+		<!-- google map guide -->
 		<div class="row">
 			<div class="col-md-8">
 				<p class="guide"><span class="numbers">&#9314;</span><span class="sectionName"> Map: </span>View the location of the concerts' venues</p>
@@ -106,6 +108,7 @@
 			</div>
 		</div>
 
+		<!-- artist playlist guide -->
 		<div class="row">
 			<div class="col-md-8">
 				<p class="guide"><span class="numbers">&#9315;</span><span class="sectionName"> Artist's Playlist: </span>Get a music preview of the artist you searched</p>
@@ -115,6 +118,7 @@
 			</div>
 		</div>
 
+		<!-- twitter timeline guide -->
 		<div class="row">
 			<div class="col-md-8">
 				<p class="guide"><span class="numbers">&#9316;</span><span class="sectionName"> Twitter Timeline: </span>Check what the artist is saying online</p>
@@ -123,22 +127,23 @@
 				<img class="template" src="assets/images/twitter.jpg">
 			</div>
 		</div>
-		
-	</div>
+			
+	</div> <!-- container -->
 
-	<!-- JQUERY -->
-	<script
-	src="https://code.jquery.com/jquery-3.2.1.min.js"
-	integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-	crossorigin="anonymous"></script>
+		<!-- JQUERY -->
+		<script
+		src="https://code.jquery.com/jquery-3.2.1.min.js"
+		integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+		crossorigin="anonymous"></script>
 
-	<!-- okayNav JS -->
-	<script type="text/javascript" src="assets/javascript/jquery.okayNav.min.js"></script>
+		<!-- okayNav JS -->
+		<script type="text/javascript" src="assets/javascript/jquery.okayNav.min.js"></script>
 
-	<!-- initialize okayNav -->
-    <script type="text/javascript">
-        var navigation = $('#nav-main').okayNav();
-    </script>
-	</div>
+		<!-- initialize okayNav -->
+	    <script type="text/javascript">
+	        var navigation = $('#nav-main').okayNav();
+	    </script>
+
+	</div> <!-- cosmos -->
 </body>
 </html>
