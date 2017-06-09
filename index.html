@@ -63,22 +63,22 @@
 <!-- BODY/CONTENT DIV -->
 <body>
 
-<!-- 	The header with our brand name and logo.-->	
-<header id="header">
-	<a class="site-logo" href="index.html">
-		<img id="sslogo" src="assets/images/SoundScoutLogo.png">
-	</a>
-	<nav role="navigation" class="okayNav" id="nav-main">			
+	<!-- 	The header with our brand name and logo.-->	
+	<header id="header">
+		<a class="site-logo" href="index.html">
+			<img id="sslogo" src="assets/images/SoundScoutLogo.png">
+		</a>
 
-      	<ul class="nav navbar-nav navbar-right">
-       		<li><a href="about.html">ABOUT</a></li>
-        	<li><a href="guide.html">GUIDE</a></li>
-        	<li><a href="team.html">TEAM</a></li>
-        	<li><a href="" data-popup-open="popup-1">RECENT SEARCHES</a></li>
-        </ul>
-			 		    
-	</nav>
-</header>
+		<nav role="navigation" class="okayNav" id="nav-main">			
+	      	<ul class="nav navbar-nav navbar-right">
+	       		<li><a href="about.html">ABOUT</a></li>
+	        	<li><a href="guide.html">GUIDE</a></li>
+	        	<li><a href="team.html">TEAM</a></li>
+	        	<li><a href="" data-popup-open="popup-1">RECENT SEARCHES</a></li>
+	        </ul>
+				 		    
+		</nav>
+	</header>
 
 	<div class="jumbotron jumbotronindex">
 		<div id="shadow">
@@ -102,98 +102,114 @@
 				  			<button type="submit" class="btn btn-default" id="search">search</button>
 			  			</form>
 
-		  			</div>
-	  			</div>
-  			</div>
-  		</div>
-	</div>
+		  			</div> <!-- div col-md-12 -->
+	  			</div> <!-- row -->
+  			</div> <!-- container -->
+  		</div> <!-- shadow div -->
+	</div> <!-- jumbotron div -->
 	
-<!-- Recent Searches Popup Window -->
-<div class="popup" data-popup="popup-1">
-    <div class="popup-inner">
-        <h2>Most recent searches</h2>
-        <table id="internalActivities">
+	<!-- Recent Searches Popup Window -->
+	<div class="popup" data-popup="popup-1">
+	    <div class="popup-inner">
+	        <h2>Most recent searches</h2>
+	        <table id="internalActivities">
 
-</table>
-<input type="button" id="seeMoreRecords" value="More">
-<input type="button" id="seeLessRecords" value="Less">
-        <a class="popup-close" data-popup-close="popup-1" href="#">x</a>           
-                
-    </div>
-</div> 
+			</table>
+			<input type="button" id="seeMoreRecords" value="More">
+			<input type="button" id="seeLessRecords" value="Less">
+	        <a class="popup-close" data-popup-close="popup-1" href="#">x</a>           
+	                
+	    </div>
+	</div> 
 
 <div class="cosmosindex">
 	<div class="container" id="bottom">
 		<div id="content-div">
+
   			<div class="row" id="searchRow">
-  					<div class="col-md-12">
-	  					<form class="form-inline" id="form1">
+				<div class="col-md-12">
 
-	  						<div class="search-error"></div>
+				<!-- search bar and button 1 -->
+					<form class="form-inline" id="form1">
 
-				  			<div class="form-group">
-				  				<input type="text" class="form-control" id="artist-input2" placeholder="Search for Artist/Band">
-				  			</div>
-				  			<button type="submit" class="btn btn-default" id="search2">search</button>
+						<div class="search-error"></div>
 
-			  			</form>
+		  				<div class="form-group">
+		  					<input type="text" class="form-control" id="artist-input2" placeholder="Search for Artist/Band">
+		  				</div>
+		  				
+		  				<button type="submit" class="btn btn-default" id="search2">search</button>
 
-			  			<form id="form2">
-				  			
-				  			<div class="search-error"></div>
+		  			</form>
+				
+				<!-- search bar and button 2; responsive -->
+	  				<form id="form2">
+		  			
+		  				<div class="search-error"></div>
 
-				  			<div class="form-group">
-				  				<input type="text" class="form-control" id="artist-input2" placeholder="Search for Artist/Band">
-				  			</div>
-				  			<button type="submit" class="btn btn-default" id="search2">search</button>
+		  				<div class="form-group">
+		  					<input type="text" class="form-control" id="artist-input2" placeholder="Search for Artist/Band">
+		  				</div>
+		  				
+		  				<button type="submit" class="btn btn-default" id="search2">search</button>
 
-			  			</form>
-		  			</div>
-	  		</div>
+	  				</form>
+  				</div> <!-- col-md-12 -->
+	  		</div> <!-- searchRow -->
 
+			<!-- UPCOMING CONCERTS PANEL -->
 			<div class="row">
 				<div class="col-md-4">
 					<h2>UPCOMING CONCERTS</h2>
 				</div>
-					<!-- 	Div for our input from Ticketmaster.-->	
+
+				<!-- 	Div for our input from Ticketmaster.-->	
 				<div class="col-md-8" style="padding: 5px">
 					<section class="panel panel-body" id="concerts-display"></section>
 				</div>
 			</div> <!-- Concerts Row -->
 
+			<!-- LOCATIONS ROW -->
 			<div class="row">
 				<div class="col-md-4">
 					<h2>LOCATIONS</h2>
 				</div>
+
 				<!-- 	Div for Google Map -->	
 				<div class="col-md-8" style="padding: 5px">
 					<section class="panel panel-body" id="map-display"></section>
 				</div>
 			</div> <!-- Locations Row -->
 
+
+			<!-- TWITTER ROW -->
 			<div class="row">
 				<div class="col-md-4">
 					<h2>TWITTER</h2>
 				</div>
+
 				<!-- 	Div for Twitter -->	
 				<div class="col-md-8">
 					<section class="panel panel-body" id="twitter-display">
 						<div id="twitter-error">
 						</div>
+
 						<div id="twitcontainer" style="height: 800px; overflow: auto;">
 
 							<script>
 								!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
 							</script>
-						</div>
+						</div> <!-- twitter container -->
 					</section>
 				</div> <!-- twitter display -->
 			</div> <!-- Twitter Row -->
 
+			<!-- YOUTUBE ROW -->
 			<div class="row">
 				<div class="col-md-4">
 					<h2>MUSIC PREVIEW</h2>
 				</div>
+				
 				<!-- 	Div for Youtube -->	
 				<div class="col-md-8">
 					<section class="panel panel-body" id="youtube-display">
@@ -217,14 +233,9 @@
 
 			
 		</div> <!-- content-div end -->
+		
 		</div> <!-- container end -->
 	</div> <!-- cosmoindex end -->
-</div>
-
-	<!-- initialize okayNav -->
-    <script type="text/javascript">
-        var navigation = $('#nav-main').okayNav();
-    </script>
 	
 </body>
 </html>
