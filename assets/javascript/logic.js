@@ -347,16 +347,16 @@ $(document).ready(function(){
 
 	// MAIN PROCESSES ============================================
 
-	$("#search").on("click", function(event){ 
+	$("#search1").on("click", function(event){ 
 		event.preventDefault();
 
 		$('#bottom').show();
 		initMap();
 
 		// This is the user's input
-		var artist = $("#artist-input").val().trim();
+		var artist = $("#artist-input1").val().trim();
 
-		$("#artist-input").val("");
+		$("#artist-input1").val("");
 		$("#twitcontainer").empty();
 		$("#concerts-display").empty();
 		$("iframe").attr("src", "");
@@ -391,6 +391,54 @@ $(document).ready(function(){
 
 
 		console.log("Artist: " + artist);
+
+		ticketmasterRequest(artist);
+
+	});
+
+	$("#search3").on("click", function(event){ 
+		event.preventDefault();
+
+		$('#bottom').show();
+		initMap();
+
+		// This is the user's input
+		var artist = $("#artist-input3").val().trim();
+
+		$("#artist-input3").val("");
+		$("#twitcontainer").empty();
+		$("#concerts-display").empty();
+		$("iframe").attr("src", "");
+		$("div#youtube-error").empty();
+		$("div#youtube-error").hide();
+		$("div#twitter-error").empty();
+		$("div#twitter-error").empty();
+
+		// console.log("Artist: " + artist);
+
+		ticketmasterRequest(artist);
+
+	});
+
+	$("#search4").on("click", function(event){ 
+		event.preventDefault();
+
+		$('#bottom').show();
+		initMap();
+
+		// This is the user's input
+		var artist = $("#artist-input4").val().trim();
+
+		$("#artist-input4").val("");
+		$("#twitcontainer").empty();
+		$("#concerts-display").empty();
+		$("iframe").attr("src", "");
+		$("div#youtube-error").empty();
+		$("div#youtube-error").hide();
+		$("div#twitter-error").empty();
+		$("div#twitter-error").empty();
+
+		// console.log("Artist: " + artist);
 
 		ticketmasterRequest(artist);
 

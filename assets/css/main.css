@@ -157,6 +157,12 @@ h3.teamname {
 
 }
 
+h2 {
+	font-family:'Abeat By Kai',sans-serif;
+	color:#f44280;
+	font-size:35px;
+}
+
 div.bio {
 	color:#fff;
 	font-family:'Roboto', 'Helvetica Neue', Helvetica;
@@ -347,14 +353,14 @@ nav.smnav {
 	font-size: 50px;
 }
 
-/* ********** FORM ********** */
+/* ********** FORM/INPUTS/BUTTONS ********** */
 
-input#artist-input.form-control {
+input#artist-input1.form-control, input#artist-input3.form-control {
 	width:300px;
 	margin:0 auto;
 }
 
-input#artist-input2{
+input#artist-input2, input#artist-input4{
 	width:300px;
 	margin:0 auto;
 }
