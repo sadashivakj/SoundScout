@@ -4,11 +4,11 @@ position: relative;
    margin: 0 auto;
     
   }
-  .panel-body{
+/*  .panel-body{
     height: 200px;
     
   }
-  #tablelist{
+*/  #tablelist{
   	font-size: 16px;
   	color: black;
 
@@ -21,6 +21,7 @@ position: relative;
     top:0px;
     left:0px;
     background:rgba(0,0,0,0.75);
+    z-index: 20;
 }
  #seeMoreRecords ,#seeLessRecords{
  	margin-top: 10px;
