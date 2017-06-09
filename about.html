@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name ="viewport" content="width=device-width, initial-scale=1">
 	
-	<!-- Firbase-->
+	<!-- Firebase-->
 	<script src="https://www.gstatic.com/firebasejs/4.1.1/firebase.js"></script>
 
 	<!-- Bootstrap -->
@@ -46,8 +46,8 @@
 		<a class="site-logo" href="index.html">
 			<img id="sslogo" src="assets/images/SoundScoutLogo.png">
 		</a>
-		<nav role="navigation" class="okayNav" id="nav-main">			
 
+		<nav role="navigation" class="okayNav" id="nav-main">			
 	      	<ul class="nav navbar-nav navbar-right">
 	       		<li><a href="about.html">ABOUT</a></li>
 	        	<li><a href="guide.html">GUIDE</a></li>
@@ -63,21 +63,22 @@
 	    <div class="popup-inner">
 	        <h2>Most recent searches</h2>
 	        <table id="internalActivities">
+			</table>
 
-	</table>
-	<input type="button" id="seeMoreRecords" value="More">
-	<input type="button" id="seeLessRecords" value="Less">
+			<input type="button" id="seeMoreRecords" value="More">
+			<input type="button" id="seeLessRecords" value="Less">
+
 	        <a class="popup-close" data-popup-close="popup-1" href="#">x</a>           
 	                
 	    </div>
-	</div> 
+	</div> <!-- recent searches popup window -->
 
 
 	<div class="jumbotron cosmosindex">
-		<div id="aboutshadow">
-		
+		<div id="aboutshadow">	
 			<div class="container">
 
+				<!-- ABOUT SOUNDSCOUT -->
 				<div class="row">
 					<div class="col-md-12">
 						<img src="assets/images/about-us.png" class="titleimg2" align="About SoundScout">
@@ -85,17 +86,17 @@
 				</div>
 
 				<div class="row">
-				
 					<div class="col-md-12">
 						<p id="aboutp">
 							Welcome to SoundScout. Our mission is to enhance your live music experience by delivering logistical and aesthetic information about your favorite artists. Here you will find information about upcoming shows, popular recorded tracks, and the perspectives of fans from around the world. We believe that live music is about feeling indescribable moments. We aim to make space for those moments. Whether you road-trip across country to catch every show of your favorite band or you plan to escape to the city for the evening, SoundScout will help you find your way.
 						</p>
 					</div>
-				</div>
+				</div> <!-- row -->
 
-			</div>
-		</div>
-	</div>	
+			</div> <!-- container -->
+		</div> <!-- aboutshadow -->
+	</div> <!-- jumbotron -->
+
 	<!-- JQUERY -->
 	<script
 	src="https://code.jquery.com/jquery-3.2.1.min.js"
@@ -108,6 +109,7 @@
 	<!-- initialize okayNav -->
     <script type="text/javascript">
         var navigation = $('#nav-main').okayNav();
-    </script>
+    </script
+    >
 </body>
 </html>
