@@ -3,28 +3,8 @@
 body {
 	background-color: #000;
 	overflow:scroll;
-	/*
-	background-color:black;
-	background-image:
-	radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
-	radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
-	radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px),
-	radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px);
-	background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
-	background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
-	*/
-
+	overflow-x:hidden;
 }
-
-
-/*
-#teambody {
-	background: url(images/abstractblk.jpg);
-	background-size:100% 100%;
-	background-repeat:repeat-y;
-	background-color:rgba(0,0,0,0.5);
-}
-*/
 
 #teambody {
 	background-color: #000;
@@ -77,22 +57,13 @@ div.form-group {
 	margin-top:110px;
 }
 
-/*
-div.name {
-
-	background-color:#000;
-	padding:2%;
-
-}
-*/
-
 div.socialmedia {
 	width:75%;
 	margin:0 auto;
 }
 
 div#twitter-error {
-	margin-top:50%;
+	margin-top:20%;
 	background-color:transparent;
 }
 
@@ -102,7 +73,7 @@ div#youtube-error {
 }
 
 #concerts-error {
-	margin-top:45%;
+	margin-top:25%;
 	background-color:transparent;
 }
 
@@ -132,6 +103,18 @@ h1#title1 {
 
 p {
 	color:#fff;
+}
+
+a {
+	font-family:'Roboto', 'Helvetica Neue', Helvetica;
+	color:#40E0D0;
+	text-decoration: none;
+}
+
+a:hover {
+	font-family:'Roboto', 'Helvetica Neue', Helvetica;
+	color:#fff;
+	text-decoration: none;
 }
 
 ul#concertlist {
@@ -265,16 +248,6 @@ li a {
 #header #nav-main a.okayNav__menu-toggle.icon--active {
 	color:#40E0D0;
 }
-
-
-/*
-nav.smnav {
-	margin-top:3%;
-	margin-left:10%;
-	background-color: #000;
-	width:70%;
-}
-*/
 
 /* ********** CONTENT ********** */
 

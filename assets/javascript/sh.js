@@ -1,4 +1,3 @@
-
 var config = {
     apiKey: "AIzaSyAnNm1xoAljW5fWeHMFgxlJZdHNd2CAFS0",
     authDomain: "soundscout-e2f06.firebaseapp.com",
@@ -7,31 +6,74 @@ var config = {
     storageBucket: "soundscout-e2f06.appspot.com",
     messagingSenderId: "849230955414"
   };
-
   firebase.initializeApp(config);
-  var database = firebase.database();
 
-$("#search").on("click", function(event){
-  
-event.preventDefault();
-var searchinfo = $("#artist-input").val().trim();
+  var searchData = firebase.database();
 
-database.ref().push({
- searchinfo :  searchinfo,
+// search button 1
+$("#search").on("click", function(event){ 
+    event.preventDefault();
+    var searchinfo = $("#artist-input").val().trim();
+    console.log(searchinfo);
 
-}); 
+    searchData.ref().push({
+        searchinfo :  searchinfo,
+    }); 
 
-$("#basic-url").val("");
-
-  return false;
-    
+    $("#artist-input").val("");
+    return false;
 });
  
-database.ref().on("child_added", function(childSnapshot) {
+// search button 2
+$("#search2").on("click", function(event){
+  
+    event.preventDefault();
+    var searchinfo = $("#artist-input2").val().trim();
+    console.log(searchinfo);
+
+    searchData.ref().push({
+        searchinfo :  searchinfo,
+    }); 
+
+    $("#artist-input2").val("");
+    return false;
+});
+
+// search button 3
+$("#search3").on("click", function(event){
+  
+    event.preventDefault();
+    var searchinfo = $("#artist-input3").val().trim();
+    console.log(searchinfo);
+
+    searchData.ref().push({
+        searchinfo :  searchinfo,
+    }); 
+
+    $("#artist-input3").val("");
+    return false;
+});
+
+// search button 4
+$("#search4").on("click", function(event){
+  
+    event.preventDefault();
+    var searchinfo = $("#artist-input4").val().trim();
+    console.log(searchinfo);
+
+    searchData.ref().push({
+        searchinfo :  searchinfo,
+    }); 
+
+    $("#artist-input4").val("");
+    return false;
+});
+ 
+ 
+searchData.ref().on("child_added", function(childSnapshot) {
 
  var searchList = childSnapshot.val().searchinfo;
  
-//$("#info").append("<div><a href=>"+ searchList +"</a></div>");
 for (var i=0;i<1;i++) {
     $('#internalActivities').append('<tr><td>'+searchList+'</td></tr>');
 }
@@ -77,11 +119,10 @@ function checkButton() {
 
 }
 
-console.log(searchList);
+//console.log(searchList);
  
 });
 
- 
 
 $("#dropdown").on("click",function(){
  modal.style.display = "block"; 
@@ -104,4 +145,3 @@ $(function() {
         e.preventDefault();
     });
 });
-

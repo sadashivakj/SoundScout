@@ -25,9 +25,21 @@ position: relative;
 }
  #seeMoreRecords ,#seeLessRecords{
  	margin-top: 10px;
+ 	width:100px;
+ 	height:40px;
+
+ 	border-radius:25px;
+	border-style: solid;
+	border-color: #40E0D0;
+	border-width:2px;
  }
- td{
- 	color: darkblue;
+
+  #seeMoreRecords:hover ,#seeLessRecords:hover {
+  	border-color:#f44280;
+  }
+
+ td {
+ 	color: #000;
  	font-size: 18px;
  	border-bottom: #666;
 
