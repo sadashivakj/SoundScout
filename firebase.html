@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SoundScout</title>
+
+		<script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
+
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	
+	<!-- okayNav CSS --> 
+	<link rel="stylesheet" type="text/css" href="assets/css/normalize.css" media="screen">
+	<link rel="stylesheet" type="text/css" href="assets/css/basic-styles.css" media="screen">
+
+	<link rel="stylesheet" type="text/css" href="assets/css/header.css" media="screen">
+	<link rel="stylesheet" href="assets/css/okayNav-base.css" media="screen">
+	<link rel="stylesheet" href="assets/css/okayNav-theme.css" media="screen">
+	
+	<!-- Searchbox CSS -->
+	<link rel="stylesheet" type="text/css" href="assets/css/searchbox.css">
+
+	<!-- Google Font -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
+
+	<!-- Custom CSS -->
+	<link rel="stylesheet" type="text/css" href="assets/css/main.css">
+
+	<!-- JQUERY LINK -->
+	<script
+	src="https://code.jquery.com/jquery-3.2.1.min.js"
+	integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+	crossorigin="anonymous"></script>
+
+	<!-- MOMENT JS LINK -->
+	<script type="text/javascript" src="assets/javascript/moment.js"></script>
+
+	<!-- GOOGLE MAPS -->
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB43DIM7NUjL0ANjSIvkYugJTswelle_r0&callback=initMap">
+    </script>
+
+    <!-- YOUTUBE -->
+    <script src="https://apis.google.com/js/api.js"></script>
+
+	<!-- okayNav JS -->
+	<script type="text/javascript" src="assets/javascript/jquery.okayNav.min.js"></script>
+
+	<!-- SCROLL JS LINK -->
+	<script type="text/javascript" src="assets/javascript/scroll.js"></script> 
+
+	<!-- CUSTOM JS LINK -->
+	<script type="text/javascript" src="assets/javascript/logic.js"></script>
+
+</head>
+<body>
+
+	<!-- 	The header with our brand name and logo.-->	
+	<header id="header">
+		<a class="site-logo" href="https://utsoundscout.herokuapp.com/">
+			<img id="sslogo" src="assets/images/SoundScoutLogo.png">
+		</a>
+
+		<nav role="navigation" class="okayNav" id="nav-main">			
+	      	<ul class="nav navbar-nav navbar-right">
+	       		<li><a href="about.html">ABOUT</a></li>
+	        	<li><a href="guide.html">GUIDE</a></li>
+	        	<li><a href="team.html">TEAM</a></li>
+	        	<li><a href="firebase.html">RECENT SEARCHES</a></li>
+	        </ul>
+				 		    
+		</nav>
+	</header>
+
+	<h1 id="recentSearchTitle">Recent Searches</h1>
+
+	<div id="recentSearch"></div>
+
+
+	 <script type="text/javascript">
+        var navigation = $('#nav-main').okayNav();
+    </script>
+
+</body>
+</html>
