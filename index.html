@@ -7,7 +7,7 @@
 	<meta name ="viewport" content="width=device-width, initial-scale=1">
 
 	<!-- Firebase -->
-	<script src="https://www.gstatic.com/firebasejs/4.1.1/firebase.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
 
 	<!-- Bootstrap -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -71,7 +71,7 @@
 	       		<li><a href="about.html">ABOUT</a></li>
 	        	<li><a href="guide.html">GUIDE</a></li>
 	        	<li><a href="team.html">TEAM</a></li>
-	        	<li><a href="" data-popup-open="popup-1">RECENT SEARCHES</a></li>
+	        	<li><a href="firebase.html">RECENT SEARCHES</a></li>
 	        </ul>
 				 		    
 		</nav>
@@ -105,20 +105,6 @@
   		</div> <!-- shadow div -->
 	</div> <!-- jumbotron div -->
 	
-	<!-- Recent Searches Popup Window -->
-	<div class="popup" data-popup="popup-1">
-	    <div class="popup-inner">
-	        <h2>Most recent searches</h2>
-	        <table id="internalActivities">
-
-			</table>
-			<input type="button" id="seeMoreRecords" value="More">
-			<input type="button" id="seeLessRecords" value="Less">
-	        <a class="popup-close" data-popup-close="popup-1" href="#">x</a>           
-	                
-	    </div>
-	</div> 
-
 <div class="cosmosindex">
 	<div class="container" id="bottom">
 		<div id="content-div">
@@ -239,8 +225,9 @@
         var navigation = $('#nav-main').okayNav();
     </script>
 
-   	<!-- //Search history JS LINK -->
-	<script src="assets/javascript/sh.js"></script>
-
+	<!-- popup search js -->
+	<!-- <script src="assets/javascript/sh.js"></script> -->
+	
 </body>
+
 </html>
