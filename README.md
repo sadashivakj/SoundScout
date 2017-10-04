@@ -7,19 +7,28 @@ A web application that delivers upcoming concerts, map of the shows, popular rec
 
 ### Landing Page
 In the landing page, search for the latest sounds by entering the name of your favorite artist or group.
+
 ![landing-page-image](./assets/images/landing-page.png)
 
 ### Upcoming Concerts
 Results will display a list of the artist's upcoming shows within the next six months. The information includes country, city, venue, local time, and a link where you can purchase tickets.
 
+![upcoming-concerts-image](./assets/images/upcoming-concerts.png)
+
 ### Locations
 Additionally, if you prefer visuals, you can refer to this section to view a map of the locations where your favorite artist will perform.
+
+![locations-image](./assets/images/locations.png)
 
 ### Twitter Timeline
 The twitter timeline is offered as an opportunity for the user to connect and keep up to date with their favorite artist.
 
+![twitter-timeline-image](./assets/images/twitter-timeline.png)
+
 ### Music Preview
 Want to listen to your favorite artist while you search for shows? Play the YouTube playlist offered for your convenience.
+
+![music-preview-image](./assets/images/music-preview.png)
 
 ## Technologies Used
   * jQuery
