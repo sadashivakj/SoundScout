@@ -13,7 +13,7 @@
     * TicketMaster Discovery API
     * Twitter Search API
     * Spotify Web API
-  * [#okayNav] (https://github.com/VPenkov/okayNav) jQuery Plugin
+  * [okayNav] (https://github.com/VPenkov/okayNav) jQuery Plugin
   
 ### Contributors
 
