@@ -7,6 +7,7 @@ A web application that delivers upcoming concerts, map of the shows, popular rec
 
 ### Landing Page
 In the landing page, search for the latest sounds by entering the name of your favorite artist or group.
+![landing-page-image](./assets/images/landing-page.png)
 
 ### Upcoming Concerts
 Results will display a list of the artist's upcoming shows within the next six months. The information includes country, city, venue, local time, and a link where you can purchase tickets.
