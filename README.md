@@ -1,6 +1,7 @@
 # SoundScout
 
 ### About
+A web application that delivers upcoming concerts, map of the shows, popular recorded tracks, and twitter timeline of your favorite artist.
 
 ### Overview
 
